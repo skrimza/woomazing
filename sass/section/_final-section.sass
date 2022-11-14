@@ -1,0 +1,116 @@
+.fourth-screen
+    padding-top: 65px
+    padding-bottom: 130px
+    @media screen and (max-width: 1200px)
+        padding-bottom: 100px
+    @media screen and (max-width: 767px)
+        padding-top: 35px
+        padding-bottom: 70px
+.team
+    &-description
+        max-width: 255px
+        @media screen and (max-width: 1200px)
+            max-width: 500px
+            text-align: center
+        &_title
+            margin-bottom: 28px
+            font-size: 25px
+            font-weight: 500
+            @media screen and (max-width: 767px)
+                margin-bottom: 
+        &_text
+            font-size: 17px
+            font-weight: 500
+            margin-bottom: 28px
+        &_about
+            color: #6E9C9F
+            transition: all 0.5s ease
+            &:hover
+                border-bottom: 1px solid #6e9c9f
+    &-dot
+        position: absolute
+        top: 75%
+        right: 50%
+        transform: translate(50%, 100%)
+    &-title
+        margin-bottom: 92px
+        @media screen and (max-width: 767px)
+            margin-bottom: 45px
+            text-align: center
+    &-slider
+        width: 729px
+        height: 487px
+        margin: 0
+        @media screen and (max-width: 1200px)
+            flex-wrap: wrap
+            flex-direction: column
+        &_gallery
+            display: flex
+            justify-content: space-between
+            position: relative
+            @media screen and (max-width: 1200px)
+                margin-bottom: 20px
+.slider-gallery_photo
+    max-height: 487px
+    max-width: 729px
+    
+    @media screen and (max-width: 991px)
+        max-width: 520px
+.slide-gallery
+    width: 100%
+    height: 100%
+.white-dot
+    background: #fff
+    opacity: .5
+    &.active
+        opacity: 1
+.ar-left
+    top: 50%
+    left: -11%
+    background: url('../images/vector-left.svg') no-repeat center center
+    position: absolute
+    width: 28px
+    height: 15px
+    border: none
+    opacity: .5
+    transition: all 0.5s ease
+    &:hover
+        opacity: 1
+    &:active
+        opacity: 1
+    @media screen and (max-width: 1200px)
+        top: 30%
+        left: 10%
+    @media screen and (max-width: 767px)
+        top: 30%
+        left: 5%
+    @media screen and (max-width: 575px)
+        display: none
+.ar-right
+    top: 50%
+    right: -11%
+    background: url('../images/vector-right.svg') no-repeat center center
+    position: absolute
+    width: 28px
+    height: 15px
+    border: none
+    opacity: .5
+    transition: all 0.5s ease
+    &:hover
+        opacity: 1
+    &:active
+        opacity: 1
+    @media screen and (max-width: 1200px)
+        top: 30%
+        right: 7%
+    @media screen and (max-width: 767px)
+        top: 30%
+        right: 0
+    @media screen and (max-width: 575px)
+        display: none
+.team-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+.team-container
+    position: relative

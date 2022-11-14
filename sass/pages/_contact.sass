@@ -1,0 +1,58 @@
+.contacts
+    padding-top: 200px
+    padding-bottom: 130px
+.contact
+    &-window
+        display: flex
+        justify-content: start
+        margin-top: 130px
+        margin-bottom: 177px
+        @media screen and (max-width: 991px)
+            margin-top: 65px
+            margin-bottom: 90px
+            @media screen and (max-width: 767px)
+                margin-top: 30px
+                margin-bottom: 45px
+                flex-direction: column
+        &_information
+            margin-right: 111px
+            @media screen and (max-width: 991px)
+                margin-right: 55px
+            @media screen and (max-width: 767px)
+                margin-right: 30px
+                margin-bottom: 20px
+            &:last-of-type
+                margin-right: 0
+        &_par
+            font-size: 17px
+            font-weight: 500
+            margin-bottom: 19px
+    &-el
+        font-size: 20px
+        font-weight: 500
+    &-form
+        max-width: 443px
+.contact-form_send
+    margin-bottom: 62px
+    font-size: 25px
+    font-weight: 500
+.input
+    width: 100%
+    border-width: 0 0 2px 0
+    border-color: #000
+    margin-bottom: 35px
+    padding: 5px 5px
+    font-size: 17px
+    font-weight: 500
+    color: #8a8888
+.form-button
+    background: #6E9C9F
+    color: #fff
+    padding: 22px 50px
+    border: none
+    transition: all 0.5s ease
+    font-size: 17px
+    &:hover
+        background: #509498
+    &:active
+        background: #509498
