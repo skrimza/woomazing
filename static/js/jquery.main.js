@@ -36,34 +36,16 @@ $(document).ready(function() {
         const $menu_popup = $('.menu-popup');
 
         $(".menu-triger").click(function() {
-            $('body').addClass('body_pointer');
-            $menu_popup.show(0);
-            $menu_popup.animate({ right: parseInt($menu_popup.css('left'), 10) == 0 ? -$menu_popup.outerWidth() : 0 },
-                300
-            );
-            return false;
+            $menu_popup.addClass('active')
         });
 
         $(".menu-close").click(function() {
-            $('body').removeClass('body_pointer');
-            $menu_popup.animate({ right: parseInt($menu_popup.css('right'), 10) == 0 ? -$menu_popup.outerWidth() : 0 },
-                300,
-                function() {
-                    $menu_popup.hide(0);
-                }
-            );
-            return false;
+            $menu_popup.removeClass('active')
         });
 
-        $(document).on('click', function(e) {
-            if (!$(e.target).closest('.menu-popup').length) {
-                $('body').removeClass('body_pointer');
-                $menu_popup.animate({ right: parseInt($menu_popup.css('right'), 10) == 0 ? -$menu_popup.outerWidth() : 0 },
-                    300,
-                    function() {
-                        $menu_popup.hide(0);
-                    }
-                );
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.menu-popup').length && !$(e.target).closest('.menu-triger').length) {
+                $menu_popup.removeClass('active');
             }
         });
     });
@@ -97,17 +79,7 @@ const infoSlider = new Swiper('.info-slider', {
     },
     preloadImages: false,
 });
-const gallerySlider = new Swiper('.gallery', {
-    // Optional parameters
-    autoplay: {
-        delay: 5000,
-    },
-    slidesPerView: "1",
-    spaceBetween: 30,
-    preloadImages: false,
-});
-infoSlider.controller.control = gallerySlider;
-gallerySlider.controller.control = infoSlider;
+
 
 const teamSlider = new Swiper('.team-slider', {
     // Optional parameters
@@ -122,10 +94,5 @@ const teamSlider = new Swiper('.team-slider', {
         type: 'bullets',
         bulletClass: 'dot',
         bulletActiveClass: 'team-active_dot',
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.ar-right',
-        prevEl: '.ar-left',
     },
 });

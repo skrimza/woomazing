@@ -1,9 +1,11 @@
 .first-screen
     padding-top: 130px
     padding-bottom: 60px
-    background: linear-gradient(to right, #fff 55%, #f1eadc 45%)
-    @media screen and (max-width: 767px)
-        background: #f1eadc
+    background: rgb(255,255,255)
+    background: linear-gradient(90deg, rgba(255,255,255,0.33375356978728987) 0%, rgba(255,242,242,1) 90%), url('../images/liberti-bg.jpg') no-repeat left center / cover
+    @media screen and (max-width: 576px)
+        background: linear-gradient(90deg, rgba(255,255,255,0.33375356978728987) 20%, rgba(255,242,242,1) 60%), url('../images/liberti-bg.jpg') no-repeat left center / cover
+        padding-bottom: 30px
 .info
     @media screen and (max-width: 767px)
         text-align: center
@@ -12,10 +14,9 @@
         margin-bottom: 125px
         @media screen and (max-width: 767px)
             margin-bottom: 60px
-        &-shell
-            display: none
-            &.active
-                display: block
+        @media screen and (max-width: 576px)
+            width: 300px !important
+            height: 400px !important
         &_title
             font-size: 55px
             font-weight: 500
@@ -31,17 +32,21 @@
                 max-width: 480px
                 margin-left: 0
             @media screen and (max-width: 575px)
-                font-size: 45px
+                max-width: 300px
+                font-size: 32px
         &_text
             font-size: 20px
             font-weight: 400
             display: block
             max-width: 380px
-            text-align: right
+            text-align: center
             margin: 0 auto 52px
             @media screen and (max-width: 767px)
                 text-align: center
                 margin: 0 auto 20px
+            @media screen and (max-width:576px)
+                max-width: 300px
+                margin: 0 auto 40px
         &_button
             background: url('../images/vector-bottom .svg') no-repeat
             background-position: 9% 50%
@@ -52,15 +57,19 @@
             border: none
             transition: all 0.5s ease
             scroll-behavior: smooth
-            @media screen and (max-width: 991px)
-                margin-left: 40px
+            // @media screen and (max-width: 991px)
+            //     margin-left: 40px
+            @media screen and (max-width: 576px)
+                max-width: 230px
             &_text
                 display: block
                 text-align: right
-                padding: 22px 50px
+                padding: 22px 55px
                 color: #ffffff
                 background-color: #6E9C9F
                 transition: all 0.5s ease
+                @media screen and (max-width: 576px)
+                    padding: 22px 20px
 .info-slider_button:hover .info-slider_button_text
     background-color: #509498
 
@@ -75,50 +84,27 @@
     background-color: #6E9C9F
     opacity: 0.1
     display: block
-    width: 67px
+    width: 62px
     height: 62px
+    @media screen and (max-width: 576px)
+        width: 50px
 .first-screen_position
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     align-items: center
     @media screen and (max-width: 767px)
         flex-wrap: wrap
-.gallery
-    width: 410px !important
-    height: 646px !important
-    margin: 0
-    @media screen and (max-width: 991px)
-        width: 350px !important
-        height: 540px !important
-    &-bg_image
-        position: absolute
-        z-index: 1
-        @media screen and (max-width: 1200px)
-            display: none
-        
-.one-image
-    max-width: 190px
-    max-height: 320px
-    overflow: hidden
-    bottom: 0
-    transform: translate(0%, 18%)
-    left: -12%
-    z-index: 2
-.two-image
-    max-width: 197px
-    max-height: 197px
-    overflow: hidden
 .slide
     max-height: 646px
     max-width: 410px
     width: 100%
     height: 100%
-.two-image
-    top: 0
-    transform: translate(50%, 50%)
-    right: 0
 .info-slider
     width: 600px
     height: 500px
-.gallery-row
-    position: relative
+    @media screen and (max-width: 1100px)
+        width: 550px
+    @media screen and (max-width: 992px)
+        width: 450px
+.screen-photo
+    height: 100%
