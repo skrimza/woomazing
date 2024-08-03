@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -13,19 +15,19 @@
     кардиганы Libertina, купальники Libertina, футболки, кардиганы, купальники, 
     мода, одежда, женщины, девушки">
     <!-- favicon -->
-    <link rel="shortcut icon" href="../static/images/flaticon.jpg">
+    <link rel="shortcut icon" href="{% static 'shop/images/flaticon.jpg'%}">
     <!-- Open graf tags -->
     <meta property="og:title" content="Магазин женской одежды Libertina.">
-    <meta property="og:description" content="Магазин женской одежды Libertina. Футболки, байки, кардиганы, купальники в магазине Libertina">
+    <meta property="og:description" content="Магазин женской одежды Libertina. Футболки, Свитшоты, Шорты, Юбки">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="../static/images/ogimage.png">
+    <meta property="og:image" content="{% static 'shop/images/ogimage.png'%}">
     <meta property="og:site_name" content="http://Libertina.by">
     <!-- connect styles for project -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet " href="../static/css/style.css ">
+    <link rel="stylesheet " href="{% static 'shop//css/style.css'%}">
 </head>
 
 <body>
@@ -192,11 +194,10 @@
                 <div class="shop-gallery" id="shop-gallery">
                     <div class="shop-gallery_window">
                         <div class="shop-gallery_photo">
-                            <img src="../static/images/shop.jpg" class="shop-photo" width="350px" height="478px" alt="shop-photo">
+                            <img src="{% static 'shop/images/shop.jpg'%}" class="shop-photo" width="350px" height="478px" alt="shop-photo">
                             <a href="#" class="shop-photo-bg">
                             </a>
                         </div>
-
                         <h3 class="shop-gallery_title">
                             Купальник Glow
                         </h3>
@@ -206,7 +207,7 @@
                     </div>
                     <div class="shop-gallery_window">
                         <div class="shop-gallery_photo">
-                            <img src="../static/images/shop-one.jpg" class="shop-photo" width="350px" height="478px" alt="shop-photo">
+                            <img src="{% static 'shop/images/shop-one.jpg'%}" class="shop-photo" width="350px" height="478px" alt="shop-photo">
                             <a href="#" class="shop-photo-bg">
                             </a>
                         </div>
@@ -219,7 +220,7 @@
                     </div>
                     <div class="shop-gallery_window">
                         <div class="shop-gallery_photo">
-                            <img src="../static/images/shop-two.jpg" class="shop-photo" width="350px" height="478px" alt="shop-photo">
+                            <img src="{% static 'shop/images/shop-two.jpg'%}" class="shop-photo" width="350px" height="478px" alt="shop-photo">
                             <a href="#" class="shop-photo-bg">
                             </a>
                         </div>
@@ -287,13 +288,13 @@
                             <div class="swiper-wrapper team-slider_gallery">
                                 <!-- Slides -->
                                 <div class="swiper-slide slider-gallery_photo">
-                                    <img src="../static/images/final-slide-one.jpg" class="slide-gallery" alt="slide-gallery">
+                                    <img src="{% static 'shop/images/final-slide-one.jpg'%}" class="slide-gallery" alt="slide-gallery">
                                 </div>
                                 <div class="swiper-slide slider-gallery_photo">
-                                    <img src="../static/images/final-slider-two.jpg" class="slide-gallery" alt="slide-gallery">
+                                    <img src="{% static 'shop/images/final-slider-two.jpg'%}" class="slide-gallery" alt="slide-gallery">
                                 </div>
                                 <div class="swiper-slide slider-gallery_photo">
-                                    <img src="../static/images/final-slide-three.jpg" class="slide-gallery" alt="slide-gallery">
+                                    <img src="{% static 'shop/images/final-slide-three.jpg'%}" class="slide-gallery" alt="slide-gallery">
                                 </div>
                             </div>
                             <!-- If we need pagination -->
@@ -342,31 +343,41 @@
                     <nav class="nav-menu nav-menu_footer">
                         <ul class="nav-menu-list">
                             <li class="menu-tab">
-                                <a href="##../static/" class="menu-link">
+                                <a href="../static/" class="menu-link">
                                     Главная
                                 </a>
                             </li>
                             <li class="menu-tab">
-                                <a href="##../static/" class="menu-link">
+                                <a href="../static/" class="menu-link">
                                     Магазин
                                 </a>
                             </li>
                             <li class="menu-tab">
-                                <a href="##../static/" class="menu-link">
+                                <a href="../static/" class="menu-link">
                                     О бренде
                                 </a>
                             </li>
                             <li class="menu-tab">
-                                <a href="##../static/" class="menu-link">
+                                <a href="../static/" class="menu-link">
                                     Контакты
                                 </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
+                <div class="footer-authorithation">
+                    <p class="footer-authorithation_text">
+                        Хочешь Быть в центре событий, первой знать о новых изделиях 
+                        и скидках от Libertina? Пройди регистрацию! Libertina не будет
+                        заниматься spam-рассылкой, а всего лишь обычные легкие уведомления 
+                        о новых постеплениях и скидках! Есть аккаунт? Войди в него!
+                    </p>
+                    <a href="#" class="footer-authoristhation_signin">Регистрация</a>
+                    <a href="#" class="footer-authorithation_login">Вход</a>
+                </div>
                 <div class="footer-pay">
-                    <div class="phone-number phone-number_footer">
-                        <a href="#" class="phone phone-footer">
+                    <div class="phone-number_footer">
+                        <a href="#" class="phone-footer">
                             +375 (29) 330-71-84
                         </a>
                     </div>
@@ -376,10 +387,10 @@
                         </a>
                     </div>
                     <div class="footer-connect">
-                        <a href="" class="footer-connect_social insta">
+                        <a href="№" class="footer-connect_social insta" rel="nofollow">
                         
                         </a>
-                        <a href="" class="footer-connect_social fbook">
+                        <a href="№" class="footer-connect_social fbook" rel="nofollow">
 
                         </a>
                     </div>
@@ -387,9 +398,9 @@
             </div>
         </div>
     </footer>
-    <script src="../static/js/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'shop/js/jquery-3.6.0.min.js'%}"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="../static/js/jquery.main.js"></script>
+    <script src="{% static 'shop/js/jquery.main.js'%}"></script>
 </body>
 
 </html>
