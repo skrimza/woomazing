@@ -1539,6 +1539,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 440px;
   text-align: center;
 }
+.footer-authorithation_text {
+  margin-bottom: 20px;
+}
+.footer-authorithation_footer {
+  margin-right: 20px;
+}
 
 .about {
   padding-top: 80px;
