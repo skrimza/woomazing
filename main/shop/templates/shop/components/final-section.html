@@ -1,0 +1,43 @@
+{% load static %}
+<section class="fourth-screen">
+    <div class="container">
+        <div class="team">
+            <h2 class="team-title h-title">
+                Достижение мечты с Libertina
+            </h2>
+            <div class="team-row">
+                <div class="team-container">
+                    <div class="swiper team-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper team-slider_gallery">
+                            <!-- Slides -->
+                            <div class="swiper-slide slider-gallery_photo">
+                                <img src="{% static 'shop/images/final-slide-one.jpg' %}" class="slide-gallery" alt="slide-gallery">
+                            </div>
+                            <div class="swiper-slide slider-gallery_photo">
+                                <img src="{% static 'shop/images/final-slider-two.jpg' %}" class="slide-gallery" alt="slide-gallery">
+                            </div>
+                            <div class="swiper-slide slider-gallery_photo">
+                                <img src="{% static 'shop/images/final-slide-three.jpg' %}" class="slide-gallery" alt="slide-gallery">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination pagination-class"></div>
+                        <!-- If we need navigation buttons -->
+                    </div>
+                </div>
+                <div class="team-description">
+                    <h3 class="team-description_title">
+                        Для каждой
+                    </h3>
+                    <p class="team-description_text">
+                        Каждая девушка уникальна и желает выделиться в этом мире!<br/><br/> Поэтому Libertina ищет эти мелочи и создает прекрасные изделия с принтами ручной работы, которые хорошо подчеркивают индивидуальность каждой девушки.
+                    </p>
+                    <a href="about.html" class="team-description_about">
+                        Подробнее о бренде
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

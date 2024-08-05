@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %}</title>
+        <!-- CEO-need -->
+        <meta name="description" content="Libertina - магазин модной женской одежды">
+        <meta name="keywords" content="РБ, Республика Беларусь, Минск, Минский район, 
+        Беларусь, Libertina, магазин модной женской одежды, футболки Libertina, 
+        кардиганы Libertina, купальники Libertina, футболки, кардиганы, купальники, 
+        мода, одежда, женщины, девушки">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'shop/images/flaticon.jpg' %}">
+        <!-- Open graf tags -->
+        <meta property="og:title" content="Магазин женской одежды Libertina.">
+        <meta property="og:description" content="Магазин женской одежды Libertina. Футболки, Свитшоты, Шорты, Юбки">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="{% static 'shop/images/ogimage.png'%}">
+        <meta property="og:site_name" content="http://Libertina.by">
+        <!-- connect styles for project -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet " href="{% static 'shop/css/style.css' %}">
+    </head>
+    <body>
+
+        {% block content %}
+        {% endblock %}
+
+        <script src="{% static 'shop/js/jquery-3.6.0.min.js' %}"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="{% static 'shop/js/jquery.main.js' %}"></script>
+    </body>
+
+</html> 

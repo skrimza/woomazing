@@ -1535,6 +1535,11 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 23px;
 }
 
+.footer-authorithation {
+  max-width: 440px;
+  text-align: center;
+}
+
 .about {
   padding-top: 80px;
   padding-bottom: 130px;
