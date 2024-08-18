@@ -1,40 +1,41 @@
+{% load static %}
 <section class="about">
-        <div class="container">
-            <div class="about-title h-title m-title">
-                О бренде
-            </div>
-            <div class="about-details">
-                <div class="about-photo photo-one">
-                    <img src="../static/about-images/girl-photo.jpg" class="about-image" alt="">
-                </div>
-                <div class="about-text">
-                    <div class="about-text_title">
-                        Идея и женщина
-                    </div>
-                    <div class="about-text_par">
-                        Libertina была основана в 2010-ом и стала одной из самых успешных компаний нашей страны. Как и многие итальянские фирмы, Libertina остаётся семейной компанией, хотя ни один из членов семьи не является модельером.<br><br> Мы действуем
-                        по успешной формуле, прибегая к услугам известных модельеров для создания своих коллекций. Этот метод был описан критиком моды Колином Макдауэллом как форма дизайнерского со-творчества, характерная для ряда итальянских prêt-a-porter
-                        компаний.
-                    </div>
-                </div>
-            </div>
-            <div class="about-details about-details_reverce">
-                <div class="about-text">
-                    <div class="about-text_title">
-                        Магия в деталях
-                    </div>
-                    <div class="about-text_par">
-                        Первый магазин Libertina был открыт в маленьком городке на севере страны в 2010-ом году. Первая коллекция состояла из двух пальто и костюма, которые были копиями парижских моделей.<br><br> Несмотря на то, что по образованию основательница
-                        была адвокатом, ее семья всегда была тесно связана с шитьём (прабабушка основательницы шила одежду для женщин, а мать основала профессиональную школу кроя и шитья). Стремление производить одежду для масс несло в себе большие перспективы,
-                        особенно в то время, когда высокая мода по-прежнему доминировала, а рынка качественного prêt-a-porter попросту не существовало.
-                    </div>
-                </div>
-                <div class="about-photo photo-two">
-                    <img src="../static/about-images/girl-sun.jpg" class="about-image" alt="">
-                </div>
-            </div>
-            <button class="info-slider_button">
-                <p class="info-slider_button_text">Открыть магазин</p>
-            </button>
+    <div class="container">
+        <div class="about-title h-title m-title">
+            Libertina - Мое любимое дитя
         </div>
-    </section>
+        <div class="about-details">
+            <div class="about-photo photo-one">
+                <img src="{% static 'shop/about-images/girl-photo.jpg' %}" class="about-image" alt="">
+            </div>
+            <div class="about-text">
+                <div class="about-text_title">
+                    Идея и женщина
+                </div>
+                <div class="about-text_par">
+                    Libertina была основана в 2010-ом и стала одной из самых успешных компаний нашей страны. Как и многие итальянские фирмы, Libertina остаётся семейной компанией, хотя ни один из членов семьи не является модельером.<br><br> Мы действуем
+                    по успешной формуле, прибегая к услугам известных модельеров для создания своих коллекций. Этот метод был описан критиком моды Колином Макдауэллом как форма дизайнерского со-творчества, характерная для ряда итальянских prêt-a-porter
+                    компаний.
+                </div>
+            </div>
+        </div>
+        <div class="about-details about-details_reverce">
+            <div class="about-text">
+                <div class="about-text_title">
+                    Магия в деталях
+                </div>
+                <div class="about-text_par">
+                    Первый магазин Libertina был открыт в маленьком городке на севере страны в 2010-ом году. Первая коллекция состояла из двух пальто и костюма, которые были копиями парижских моделей.<br><br> Несмотря на то, что по образованию основательница
+                    была адвокатом, ее семья всегда была тесно связана с шитьём (прабабушка основательницы шила одежду для женщин, а мать основала профессиональную школу кроя и шитья). Стремление производить одежду для масс несло в себе большие перспективы,
+                    особенно в то время, когда высокая мода по-прежнему доминировала, а рынка качественного prêt-a-porter попросту не существовало.
+                </div>
+            </div>
+            <div class="about-photo photo-two">
+                <img src="{% static 'shop/about-images/girl-sun.jpg' %}" class="about-image" alt="">
+            </div>
+        </div>
+        <button class="info-slider_button">
+            <a href="#" class="info-slider_button_text">Открыть магазин</a>
+        </button>
+    </div>
+</section>

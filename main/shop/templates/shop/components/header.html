@@ -2,29 +2,29 @@
     <div class="container container-header">
         <div class="header-info">
             <div class="logo">
-                <a href="index.html" class="logo-home">
+                <a href="{% url 'shop_index' %}" class="logo-home">
                 </a>
             </div>
             <!-- menu header -->
             <nav class="nav-menu">
                 <ul class="nav-menu-list">
                     <li class="menu-tab">
-                        <a href="index.html" class="menu-link">
+                        <a href="{% url 'shop_index' %}" class="menu-link">
                             Главная
                         </a>
                     </li>
                     <li class="menu-tab">
-                        <a href="shop.html" class="menu-link">
+                        <a href="{% url 'shop_list' %}" class="menu-link">
                             Магазин
                         </a>
                     </li>
                     <li class="menu-tab">
-                        <a href="about.html" class="menu-link">
-                            О бренде
+                        <a href="{% url 'shop_about' %}" class="menu-link">
+                            Блог
                         </a>
                     </li>
                     <li class="menu-tab">
-                        <a href="contact.html" class="menu-link">
+                        <a href="{% url 'shop_contact' %}" class="menu-link">
                             Контакты
                         </a>
                     </li>
@@ -49,16 +49,16 @@
                 <a class="menu-close" href="#"></a>
                 <ul class="mobile-menu">
                     <li class="mobile-menu_tab">
-                        <a href="index.html">Главная</a>
+                        <a href="{% url 'shop_index' %}">Главная</a>
                     </li>
                     <li class="mobile-menu_tab">
-                        <a href="shop.html">Магазин</a>
+                        <a href="{% url 'shop_list' %}">Магазин</a>
                     </li>
                     <li class="mobile-menu_tab">
-                        <a href="about.html">О бренде</a>
+                        <a href="{% url 'shop_about' %}">О бренде</a>
                     </li>
                     <li class="mobile-menu_tab">
-                        <a href="contact.html">Контакты</a>
+                        <a href="{% url 'shop_contact' %}">Контакты</a>
                     </li>
                     <li class="mobile-menu_tab">
                         <a href="tel:+375291739013" class="inline">

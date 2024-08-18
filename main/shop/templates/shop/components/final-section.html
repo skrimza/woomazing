@@ -3,7 +3,7 @@
     <div class="container">
         <div class="team">
             <h2 class="team-title h-title">
-                Достижение мечты с Libertina
+                {{ content.life_title }}
             </h2>
             <div class="team-row">
                 <div class="team-container">
@@ -11,15 +11,9 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper team-slider_gallery">
                             <!-- Slides -->
-                            <div class="swiper-slide slider-gallery_photo">
-                                <img src="{% static 'shop/images/final-slide-one.jpg' %}" class="slide-gallery" alt="slide-gallery">
-                            </div>
-                            <div class="swiper-slide slider-gallery_photo">
-                                <img src="{% static 'shop/images/final-slider-two.jpg' %}" class="slide-gallery" alt="slide-gallery">
-                            </div>
-                            <div class="swiper-slide slider-gallery_photo">
-                                <img src="{% static 'shop/images/final-slide-three.jpg' %}" class="slide-gallery" alt="slide-gallery">
-                            </div>
+                            {% for slide in sliders %}
+                                {% include 'shop/components/final-slide.html' %}
+                            {% endfor %}
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination pagination-class"></div>
@@ -28,10 +22,10 @@
                 </div>
                 <div class="team-description">
                     <h3 class="team-description_title">
-                        Для каждой
+                        {{ content.small_title }}
                     </h3>
                     <p class="team-description_text">
-                        Каждая девушка уникальна и желает выделиться в этом мире!<br/><br/> Поэтому Libertina ищет эти мелочи и создает прекрасные изделия с принтами ручной работы, которые хорошо подчеркивают индивидуальность каждой девушки.
+                        {{ content.small_description }}
                     </p>
                     <a href="about.html" class="team-description_about">
                         Подробнее о бренде

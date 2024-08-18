@@ -1,0 +1,17 @@
+<div class="shop-gallery_window">
+    <div class="shop-gallery_photo">
+        <img src="{{ shirt.photo.url }}" class="shop-photo" width="350px" height="478px" alt="shop-photo">
+        <a href="#" class="shop-photo-bg">
+        </a>
+    </div>
+    <h3 class="shop-gallery_title">
+        {{ shirt.title }}
+    </h3>
+    <p class="shop-gallery_price">
+        {% if shirt.new_price %}
+            <s>${{ shirt.price }}</s> ${{ shirt.new_price }}
+        {% else %}
+            ${{ shirt.price }}
+        {% endif %}
+    </p>
+</div>

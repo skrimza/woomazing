@@ -1,0 +1,9 @@
+<li class="shop-navigation_tab">
+    <button class="shop-navigation_button" type="submit">
+        {% if not name in category %}
+            {{ category }}
+        {% else %}
+            {{ category.name }}
+        {% endif %}
+    </button>
+</li>

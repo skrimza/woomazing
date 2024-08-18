@@ -6,7 +6,9 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        {% include 'shop/components/head-slide.html' %}
+                        {% for slide in sliders %}
+                            {% include 'shop/components/head-slide.html' %}
+                        {% endfor %}
                     </div>
                     <!-- if we need pagination -->
                     <div class="swiper-pagination margin-dot"></div>

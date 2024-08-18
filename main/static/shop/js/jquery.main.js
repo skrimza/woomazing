@@ -51,15 +51,19 @@ $(document).ready(function() {
     });
 
     // tabs-menu shop
-    $('.shop-navigation_button').on('click', function() {
+    $(document).ready(function () {
+        $('.shop-navigation_button').first().addClass('active');
+        $('.shop-catalog_list').first().addClass('active');
+        $('.shop-navigation_button').on('click', function() {
 
-        let currTab = $(this).parent().index();
-        $('.shop-navigation_button').removeClass('active');
-        $(this).addClass('active');
+            let currTab = $(this).parent().index();
+            $('.shop-navigation_button').removeClass('active');
+            $(this).addClass('active');
 
-        $('.shop-catalog_list').removeClass('active');
-        $('.shop-catalog_list').eq(currTab).addClass('active');
-    });
+            $('.shop-catalog_list').removeClass('active');
+            $('.shop-catalog_list').eq(currTab).addClass('active');
+        });
+    });    
 });
 
 const infoSlider = new Swiper('.info-slider', {
