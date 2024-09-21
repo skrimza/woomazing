@@ -1,5 +1,8 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.views.generic import ListView, TemplateView, DetailView
-
+from django.http import HttpResponse, JsonResponse, HttpRequest
+from django.views.decorators.http import require_GET
 from .models import Category, Product, IndexTemplateSlide, TemplateContent
 
 
@@ -35,32 +38,33 @@ class AboutTemplateView(TemplateView):
 
 class ContactTemplateView(TemplateView):
     template_name = 'shop/contact.html'
-  
+
 
 class ShopTemplateView(ListView):
     template_name = 'shop/shop.html'
     model = Product
-    
+        
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         categories = list(Category.objects.all())
         categories.insert(0, 'Все')
+        category_map = {}
+        category_map['Все'] = Product.objects.all()
+        for category in categories:
+            if isinstance(category, Category):
+                category_map.update({category.name: Product.objects.filter(category__slug=category.slug)})    
         context["categories"] = categories
-        sweatshirt_category = Category.objects.get(slug='sweetshot')
-        tshirt_category = Category.objects.get(slug='t-shirt')
-        long_category = Category.objects.get(slug='longsleeve')
-        products = Product.objects.select_related('category').all()
-        context['all_products'] = products
-        context['sweetshot'] = [product for product in products if product.category == sweatshirt_category]
-        context['tshirt'] = [product for product in products if product.category == tshirt_category]
-        context['longsleeve'] = [product for product in products if product.category == long_category]
+        context['category_map'] = category_map.values()
         return context
     
-    def get_queryset(self):
-        pass
-        # superset = super().get_queryset()  
-    
 
-class ProductTemplateView(DetailView):
-    pass
+class CardTemplateView(DetailView):
+    model = Product
+    template_name = 'shop/detail.html'
+    
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+    

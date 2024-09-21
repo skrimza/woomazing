@@ -1,5 +1,5 @@
 <li class="shop-navigation_tab">
-    <button class="shop-navigation_button" type="submit">
+    <button class="shop-navigation_button" type="submit" data-slug={{ category.slug }}>
         {% if not name in category %}
             {{ category }}
         {% else %}

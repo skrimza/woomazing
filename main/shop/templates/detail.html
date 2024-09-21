@@ -1,0 +1,31 @@
+{% extends "shop/base.html" %}
+{% block title %}
+Каталог
+{% endblock %}
+{% block content %}
+    <style>
+         ::-webkit-scrollbar {
+            width: 15px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: rgb(193, 125, 125);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgb(94, 75, 234);
+        }
+        
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #6E9C9F #f1eadc;
+        }
+    </style>
+    <!-- header screen -->
+    {% include 'shop/components/header.html' %}
+
+    {% include 'shop/components/product-section.html'%}
+
+    <!-- footer section -->
+    {% include 'shop/components/footer.html' %}
+{% endblock %}

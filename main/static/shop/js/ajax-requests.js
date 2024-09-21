@@ -1,16 +1,21 @@
-$(document).ready(function () {
-    e.preventDefault();
-    $(".shop-navigation_button").on("click", function () {
-        let buttonText = $(this).text(); // Получаем текст нажатой кнопки
-        $.ajax({
-            data: {
-                button: buttonText
-            },
-            type: 'POST',
-            url: '../../../json_requests.py'
-        });
-    });
-});
+// $(document).ready(function () {
+//     $(".shop-navigation_button").on("click", function (e) {
+//         e.preventDefault();
+//         let buttonText = $(this).text(); // Получаем текст нажатой кнопки
+//         console.log(buttonText)
+//         $.ajax({
+//             data: {
+//                 category: buttonText,
+//             },
+//             type: "GET",
+//             url: "/shop/request/",
+//             success: function (data) {
+//                 var dataString = JSON.stringify(data.message);
+//                 console.log(dataString);
+//             }
+//         });
+//     });
+// });
 // это будет контактная форма
 // $('#form').on('submit', function (e) {
 //     e.preventDefault(); // Отмена стандартной отправки формы (без перезагрузки страницы)
