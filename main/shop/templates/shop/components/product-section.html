@@ -1,0 +1,65 @@
+<div class="product">
+    <div class="container">
+        <h2 class="product_title h-title">
+            Карточка товара
+        </h2>
+        <div class="product_detail">
+            <div class="product_detail_img">
+                <img src="" class="product-image" alt="product-image">
+            </div>
+            <div class="product_detail-description">
+                <h3 class="product_detail-description_title">
+                    Название товара
+                </h3>
+                <p class="product_detail-description_info">
+                    Описание товара
+                </p>
+                <p class="product_detail-description_price">
+                    {% if item.new_price %}
+                        <s>${{ item.price }}</s> ${{ item.new_price }}
+                    {% else %}
+                        ${{ item.price }}
+                    {% endif %}
+                </p>
+                <button class="product_detail-description_button">
+                    Добавить в корзину
+                </button>
+            </div>
+            
+        </div>
+        <div class="product_delivery">
+            <h4 class="product_delivery-title">
+                Способы доставки:
+            </h4>
+            <ul class="product_delivery-list">
+                <li class="product_delivery-item">
+                    Минск
+                    <ul class="product_delivery-item_description">
+                        <li class="product_delivery-item_description-post">
+                            Самовывоз : На данный момент пункт самовывоза по городу Минск отсутствует<br>
+                            Курьер по Минску: 10 белорусских рублей<br>
+                        </li>
+                    </ul>
+                </li>
+                <li class="product_delivery-item">
+                    Доставка по Беларуси
+                    <ul class="product_delivery-item_description">
+                        <li class="product_delivery-item_description-post">
+                            Европочта: 2-4 раб.дня по тарифам Европочты за счет получателя<br>
+                            Белпочта: 2-5 раб.дня по тарифам Белпочты за счет получателя<br>
+                        </li>
+                    </ul>
+                </li>
+                <li class="product_delivery-item">
+                    Доставка (СНГ)
+                    <ul class="product_delivery-item_description">
+                        <li class="product_delivery-item_description-post">
+                            СДЭК: 2-14 раб.дня по тарифам СДЭК<br>
+                            Способы оплаты: Онлайн-оплата , Наличные, Безналичные( Visa,Mastercard,Белкарт, МИР), Apple Pay, Samsung Pay.<br>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,6 @@ urlpatterns = [
     path('about/', AboutTemplateView.as_view(), name='shop_about'),
     path('contact/', ContactTemplateView.as_view(), name='shop_contact'),
     path('shop/', ShopTemplateView.as_view(), name='shop_list'),
-    path('shop/product=<int:item_id>/', CardTemplateView.as_view(), name='card_product')
+    path('shop/product=<int:pk>/', CardTemplateView.as_view(), name='card_product')
 ]
 
